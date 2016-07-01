@@ -4,6 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
+    'babel-polyfill',
     'webpack-hot-middleware/client',
     './src/index',
   ],
@@ -34,6 +35,15 @@ module.exports = {
         ],
         test: /\.js$/,
         plugins: ['transform-runtime'],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css',
+      },
+      {
+        test: /\.(ttf|woff|woff2|eot|)$/,
+        loader: 'file-loader',
       },
     ],
   },

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Smart Regular';
+  src: url('../fonts/smart-regular.eot');
+  src: url('../fonts/smart-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/smart-regular.woff2') format('woff2'),
+       url('../fonts/smart-regular.woff') format('woff'),
+       url('../fonts/smart-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.react-chessboard-piece {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Smart Regular';
+  cursor: move;
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.react-chessboard-piece--dragging {
+  display: none;
+}
